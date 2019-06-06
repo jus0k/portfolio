@@ -7,9 +7,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: 'style.css' })
-  ],
   module: {
     rules: [
       {
@@ -23,5 +20,12 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "./dist/"),
+    port: 9000
+  },
+  plugins: [
+    new MiniCssExtractPlugin({ filename: 'style.css' })
+  ]
 };

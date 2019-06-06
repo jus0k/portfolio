@@ -75,7 +75,21 @@ button {
   background-color: transparent;
 }
 
-body {
+html {
   font-family: "Lato", "Nanum Barun Gothic", sans-serif;
+  font-size: 16px;
+}
+
+.header__logo {
+  color: #000;
+  display: inline-block;
+  margin: 0;
+}
+
+.header__logo a {
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 1.3rem;
+  font-weight: 900;
 }
 

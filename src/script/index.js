@@ -1,3 +1,7 @@
-import menu from './menu'
+import { menuBtn, showMenu } from './menu'
 
-console.log(menu(3));
+const init = () => {
+  menuBtn.addEventListener('click', showMenu);
+}
+
+init();

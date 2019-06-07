@@ -1,8 +1,9 @@
 .section-menu {
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 10%;
   color: $white;
-  width: 100%;
+  width: 80%;
   height: 100vh;
   margin: auto;
   display: flex;
@@ -18,11 +19,11 @@
     visibility: visible;
   }
 
-  &__flex {
+  &__container {
     width: 80%;
     max-width: 980px;
-    margin: auto;
     height: 460px;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,11 +91,7 @@
     transition: all .5s ease-in-out;
   }
 
-  &__wrapper {
-    height: 100%;
-  }
-  
-  &__wrapper:last-child {
+  &__text {
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -122,31 +119,28 @@
     }
   }
 
-  &__text {
+  &__copyright {
     margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 575px) {
   .section-menu {
-    &__flex {
-      width: 100%;
-      height: 100vh;
-      margin: 10%;
-      margin-top: 40%;
-      flex-direction: column;
-    }
+    width: 100%;
+    top: 20%;
+    left: 0;
 
-    &__gnb {
-      height: 20rem;
-      margin-bottom: 5rem;
+    &__container {
+      display: block;
+      margin-left: 10%;
+      height: 100%;
     }
 
     &__list {
       font-size: 3rem;
     }
 
-    &__wrapper:last-child {
+    &__text {
       text-align: left;
     }
   }

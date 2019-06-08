@@ -30,7 +30,6 @@
   }
 
   &__gnb {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -129,19 +128,56 @@
     width: 100%;
     top: 20%;
     left: 0;
+    justify-content: flex-start;
 
     &__container {
-      display: block;
-      margin-left: 10%;
-      height: 100%;
+      height: auto;
+      margin: 0 10%;
+      flex-direction: column;
+      align-self: flex-start;
+    }
+
+    &__gnb {
+      li {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: flex-start;
+      }
     }
 
     &__list {
+      position: relative;
       font-size: 3rem;
     }
 
     &__text {
       text-align: left;
+    }
+
+    &__num {
+      position: relative;
+      opacity: 1;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    &__contact {
+      margin-bottom: 1rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__social {
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          margin-right: 1rem;
+        }
+      }
     }
   }
 }

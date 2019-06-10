@@ -15,7 +15,7 @@
 .section-catalogue {
   width: 100%;
   font-family: $sans-serif;
-  
+
   &__item {
     width: 80%;
     max-width: 1180px;
@@ -91,7 +91,7 @@
 
   &__main-title {
     font-size: 5rem;
-    line-height: 1;
+    line-height: 1.3;
     font-weight: 900;
     color: #1680FF;
     @include fadeInUp(0);
@@ -157,6 +157,7 @@
     z-index: -1;
     right: 0;
     clip-path: inset(100% 0 0 0);
+    -webkit-clip-path: inset(100% 0 0 0);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     overflow: hidden;
 
@@ -170,9 +171,17 @@
     }
     
     &.show {
-      animation: showImage 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+      animation-name: showImage;
+      animation-duration: 1.5s;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
       animation-fill-mode: both;
       animation-direction: alternate;
+
+      -webkit-animation-name: showImage;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-direction: alternate;
     }
   }
 }

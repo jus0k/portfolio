@@ -508,6 +508,7 @@ html {
   .section-menu__list {
     position: relative;
     font-size: 3rem;
+    color: #fff;
   }
   .section-menu__text {
     text-align: left;
@@ -638,9 +639,14 @@ html {
   white-space: nowrap;
   top: 0;
   left: 0;
-  animation: move 10s;
+  animation-name: move;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(1, -0.2, 0, 1.2);
+  -webkit-animation-name: move;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, -0.2, 0, 1.2);
 }
 
 .rotate__text--second img {
@@ -769,7 +775,7 @@ html {
 
 .section-catalogue__main-title {
   font-size: 5rem;
-  line-height: 1;
+  line-height: 1.3;
   font-weight: 900;
   color: #1680FF;
   opacity: 0;
@@ -865,6 +871,7 @@ html {
   z-index: -1;
   right: 0;
   clip-path: inset(100% 0 0 0);
+  -webkit-clip-path: inset(100% 0 0 0);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
@@ -879,9 +886,16 @@ html {
 }
 
 .section-catalogue__image.show {
-  animation: showImage 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-name: showImage;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: both;
   animation-direction: alternate;
+  -webkit-animation-name: showImage;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
 }
 
 @media (max-width: 575px) {

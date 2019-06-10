@@ -89,9 +89,14 @@
     white-space: nowrap;
     top: 0;
     left: 0;
-    animation: move 10s;
+    animation-name: move;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(1, -0.2, 0, 1.2);
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1, -0.2, 0, 1.2);
 
     img {
       margin-left: 1rem;

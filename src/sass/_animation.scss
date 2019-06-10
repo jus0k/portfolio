@@ -71,18 +71,18 @@
 
 @keyframes move {
   0%, 15%  { top: 0; }
-  20%, 35% { top: -5rem; }
-  40%, 55% { top: -10rem; }
-  60%, 75% { top: -15rem; }
-  80%, 95% { top: -20rem; }
+  20%, 35% { top: -8rem; }
+  40%, 55% { top: -16rem; }
+  60%, 75% { top: -24rem; }
+  80%, 95% { top: -32rem; }
 }
 
 @keyframes moveMobile {
   0%, 15%  { top: 0; }
-  20%, 35% { top: -2rem; }
-  40%, 55% { top: -4rem; }
-  60%, 75% { top: -6rem; }
-  80%, 95% { top: -8rem; }
+  20%, 35% { top: -3rem; }
+  40%, 55% { top: -6rem; }
+  60%, 75% { top: -9rem; }
+  80%, 95% { top: -12rem; }
 }
 
 @keyframes spin {

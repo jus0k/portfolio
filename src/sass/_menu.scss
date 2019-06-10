@@ -13,6 +13,7 @@
   visibility: hidden;
   transition: opacity 0.5s ease-in-out;
   z-index: 1001;
+  font-family: $sans-serif;
 
   &.show {
     opacity: 1;

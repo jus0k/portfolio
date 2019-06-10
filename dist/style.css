@@ -533,6 +533,7 @@ html {
 }
 
 .section-hello__title p {
+  font-family: "Lato", "Nanum Barun Gothic", sans-serif;
   font-size: 5rem;
   font-weight: 900;
   margin-bottom: 2rem;

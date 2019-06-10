@@ -170,16 +170,16 @@ html {
     top: 0;
   }
   20%, 35% {
-    top: -5rem;
+    top: -8rem;
   }
   40%, 55% {
-    top: -10rem;
+    top: -16rem;
   }
   60%, 75% {
-    top: -15rem;
+    top: -24rem;
   }
   80%, 95% {
-    top: -20rem;
+    top: -32rem;
   }
 }
 
@@ -188,16 +188,16 @@ html {
     top: 0;
   }
   20%, 35% {
-    top: -2rem;
+    top: -3rem;
   }
   40%, 55% {
-    top: -4rem;
-  }
-  60%, 75% {
     top: -6rem;
   }
+  60%, 75% {
+    top: -9rem;
+  }
   80%, 95% {
-    top: -8rem;
+    top: -12rem;
   }
 }
 
@@ -362,6 +362,7 @@ html {
   visibility: hidden;
   transition: opacity 0.5s ease-in-out;
   z-index: 1001;
+  font-family: "Lato", "Nanum Barun Gothic", sans-serif;
 }
 
 .section-menu.show {
@@ -536,7 +537,7 @@ html {
   font-family: "Lato", "Nanum Barun Gothic", sans-serif;
   font-size: 5rem;
   font-weight: 900;
-  margin-bottom: 2rem;
+  line-height: 8rem;
 }
 
 .section-hello__title p:first-child {
@@ -574,6 +575,7 @@ html {
 }
 
 .section-hello__text {
+  font-family: "Lato", "Nanum Barun Gothic", sans-serif;
   opacity: 0;
   transform: translate3d(0, 100%, 0);
   animation-name: fadeInUp;
@@ -602,7 +604,7 @@ html {
 
 .rotate__container {
   float: left;
-  height: 5rem;
+  height: 8rem;
   overflow: hidden;
   margin-left: 1rem;
 }
@@ -637,7 +639,8 @@ html {
   }
   .section-hello__title p {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
+    line-height: 3rem;
   }
   .section-hello__text {
     width: 100%;
@@ -652,7 +655,7 @@ html {
     width: 8rem;
   }
   .rotate__container {
-    height: 2rem;
+    height: 3rem;
     margin-left: 0.5rem;
   }
   .rotate__text--second {
@@ -666,6 +669,7 @@ html {
 
 .section-catalogue {
   width: 100%;
+  font-family: "Lato", "Nanum Barun Gothic", sans-serif;
 }
 
 .section-catalogue__item {

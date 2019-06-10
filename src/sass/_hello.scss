@@ -1,0 +1,148 @@
+@mixin fadeInUp ($delay) {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+
+.section-hello {
+  width: 80%;
+  max-width: 1180px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__container {
+    position: relative;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+
+  &__title {
+    p {
+      font-size: 5rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+
+      &:first-child {
+        @include fadeInUp(0);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        @include fadeInUp(0.2s);
+      }
+
+      &:last-child {
+        @include fadeInUp(0.3s);
+        clear: both;
+      }
+    }
+  }
+
+  &__text {
+    @include fadeInUp(0.4s);
+    width: 60%;
+    line-height: 1.5;
+  }
+
+  &__scroll {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 12.5rem;
+      opacity: 0.5;
+      transition: all 0.5s linear;
+      animation: spin 20s infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+.rotate {
+  &__container {
+    float: left;
+    height: 5rem;
+    overflow: hidden;
+    margin-left: 1rem;
+  }
+
+  &__text--first {
+    float: left;
+  }
+
+  &__text--second {
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    animation: move 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, -0.2, 0, 1.2);
+
+    img {
+      margin-left: 1rem;
+      width: 4rem;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .section-hello {
+    width: 80%;
+    margin-left: 10%;
+
+    &__container {
+      height: fit-content;
+      margin-top: 30%;
+    }
+
+    &__title {
+      p {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__text {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    &__scroll {
+      position: relative;
+      align-self: flex-end;
+      margin-top: 5rem;
+
+      img {
+        width: 8rem;
+      }
+    }
+  }
+
+  .rotate {
+    &__container {
+      height: 2rem;
+      margin-left: 0.5rem;
+    }
+
+    &__text--second {
+      animation-name: moveMobile;
+      img {
+        width: 1.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

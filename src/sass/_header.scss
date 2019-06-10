@@ -2,6 +2,7 @@
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1000;
 
   &__container {
     margin: 50px;
@@ -120,6 +121,20 @@
   .header {
     &__container {
       margin: 10%;
+    }
+  }
+
+  .menu {
+    &:hover {
+      .menu__background {
+        transform: none;
+      }
+    }
+
+    &.open {
+      .menu__background {
+        transform: scale(100);
+      }
     }
   }
 }

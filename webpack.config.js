@@ -18,6 +18,21 @@ module.exports = {
           // 'sass-loader?outputStyle=compressed'
         ],
         exclude: /node_modules/
+      },
+      { 
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              context: path.resolve(__dirname, "src/"),
+              outputPath: 'dist/',
+              publicPath: '../',
+              useRelativePaths: true
+            }
+          }
+        ]
       }
     ]
   },

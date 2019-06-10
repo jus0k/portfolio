@@ -140,7 +140,7 @@
     &__gnb {
       li {
         flex-direction: column;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         align-items: flex-start;
       }
     }
@@ -162,8 +162,9 @@
     }
 
     &__contact {
+      margin-top: 2rem;
       margin-bottom: 1rem;
-      
+
       li {
         margin-bottom: 0.5rem;
       }

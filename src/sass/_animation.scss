@@ -68,3 +68,32 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@keyframes move {
+  0%, 15%  { top: 0; }
+  20%, 35% { top: -5rem; }
+  40%, 55% { top: -10rem; }
+  60%, 75% { top: -15rem; }
+  80%, 95% { top: -20rem; }
+}
+
+@keyframes moveMobile {
+  0%, 15%  { top: 0; }
+  20%, 35% { top: -2rem; }
+  40%, 55% { top: -4rem; }
+  60%, 75% { top: -6rem; }
+  80%, 95% { top: -8rem; }
+}
+
+@keyframes spin {
+ from { transform: rotate(0deg); }
+ to { transform: rotate(360deg); }
+}
+
+@keyframes showImage {
+  from {
+    clip-path: inset(100% 0 0 0);
+  } to {
+    clip-path: inset(0 0 0 0);
+  }
+}

@@ -687,9 +687,22 @@ html {
 }
 
 .section-catalogue__container {
+  display: block;
   width: 100%;
   height: 660px;
   position: relative;
+}
+
+.section-catalogue__container:hover .section-catalogue__icon-bg {
+  transform: scale(1.5);
+}
+
+.section-catalogue__container:hover .section-catalogue__view-label {
+  transform: translate3d(1rem, 0, 0);
+}
+
+.section-catalogue__container:hover .section-catalogue__image span {
+  transform: scale(1.1);
 }
 
 .section-catalogue__text {
@@ -785,15 +798,6 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  cursor: pointer;
-}
-
-.section-catalogue__btn-wrap:hover .section-catalogue__icon-bg {
-  transform: scale(1.5);
-}
-
-.section-catalogue__btn-wrap:hover .section-catalogue__view-label {
-  transform: translate3d(1rem, 0, 0);
 }
 
 .section-catalogue__view-label {
@@ -832,12 +836,21 @@ html {
 .section-catalogue__image {
   width: 75%;
   height: 660px;
-  background-size: cover;
-  background-position: center center;
   position: absolute;
   z-index: -1;
   right: 0;
   clip-path: inset(100% 0 0 0);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.section-catalogue__image span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .section-catalogue__image.show {
@@ -849,6 +862,11 @@ html {
 @media (max-width: 575px) {
   .section-catalogue {
     width: 100%;
+  }
+  .section-catalogue__container:hover .section-catalogue__icon-bg,
+  .section-catalogue__container:hover .section-catalogue__view-label,
+  .section-catalogue__container:hover .section-catalogue__image span {
+    transform: none;
   }
   .section-catalogue__item {
     width: 100%;

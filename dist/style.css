@@ -177,43 +177,20 @@ html {
     transform: translateY(0);
   }
   20%, 35% {
-    -webkit-transform: translateY(-8rem);
-    transform: translateY(-8rem);
+    -webkit-transform: translateY(-20%);
+    transform: translateY(-20%);
   }
   40%, 55% {
-    -webkit-transform: translateY(-16rem);
-    transform: translateY(-16rem);
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
   }
   60%, 75% {
-    -webkit-transform: translateY(-24rem);
-    transform: translateY(-24rem);
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
   }
   80%, 95% {
-    -webkit-transform: translateY(-32rem);
-    transform: translateY(-32rem);
-  }
-}
-
-@keyframes moveMobile {
-  0%, 15% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  20%, 35% {
-    -webkit-transform: translateY(-3rem);
-    transform: translateY(-3rem);
-  }
-  40%, 55% {
-    -webkit-transform: translateY(-6rem);
-    transform: translateY(-6rem);
-  }
-  60%, 75% {
-    -webkit-transform: translateY(-9rem);
-    transform: translateY(-9rem);
-  }
-  80%, 95% {
-    -webkit-transform: translateY(-12rem);
-    transform: translateY(-12rem);
+    -webkit-transform: translateY(-80%);
+    transform: translateY(-80%);
   }
 }
 
@@ -684,9 +661,6 @@ html {
   .rotate__container {
     height: 3rem;
     margin-left: 0.5rem;
-  }
-  .rotate__text--second {
-    animation-name: moveMobile;
   }
   .rotate__text--second img {
     width: 1.5rem;

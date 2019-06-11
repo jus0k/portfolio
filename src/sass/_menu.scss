@@ -23,7 +23,7 @@
   &__container {
     width: 80%;
     max-width: 980px;
-    height: 460px;
+    height: 500px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -176,6 +176,7 @@
       ul {
         display: flex;
         flex-direction: row;
+        margin: 1rem 0;
 
         li {
           margin-right: 1rem;

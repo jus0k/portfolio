@@ -2,6 +2,7 @@ const menuBtn = document.querySelector('.menu'),
       menuIcon = document.querySelector('.menu__icon--detail'),
       sectionMenu = document.querySelector('.section-menu'),
       sectionScreen = document.querySelector('.section-screen'),
+      sectionMore = document.querySelector('.section-more'),
       logo = document.querySelector('.header__logo');
 
 const showMenu = () => {

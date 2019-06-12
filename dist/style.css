@@ -218,6 +218,24 @@ html {
   }
 }
 
+.section-loading {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.section-loading.hide {
+  display: none;
+}
+
 .header {
   width: 100%;
   position: fixed;

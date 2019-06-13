@@ -1,11 +1,9 @@
-const loading = document.querySelector('.section-loading');
+const cover = document.querySelector('.section-portfolio__cover');
 
-const showScreen = () => {
-  loading.classList.add('hide');
-}
+const showCover = () => {
+  if (cover !== null) {
+    cover.classList.add('show');
+  }
+};
 
-window.onload = function () {
-  
-}
-
-export { showScreen };
+export { showCover };

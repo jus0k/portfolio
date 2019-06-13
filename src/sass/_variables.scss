@@ -8,19 +8,3 @@ $pro-gominler: #ff530e;
 
 // fonts
 $sans-serif: 'Lato', 'Nanum Barun Gothic', sans-serif;
-
-//mixin
-@mixin fadeInUp ($delay) {
-  opacity: 0;
-  transform: translate3d(0, 100%, 0);
-
-  &.show {
-      -webkit-animation-name: fadeInUp;
-      animation-name: fadeInUp;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      animation-delay: $delay;
-  }
-}

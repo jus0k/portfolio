@@ -1,12 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Jusung Kim Portfolio</title>
+  <link href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-  tripurse
+  <header class="header">
+    <div class="header__container">
+      <h2 class="header__logo"><a href="">Jusung Kim</a></h2>
+      <div class="menu">
+        <div class="menu__background"></div>
+        <div class="menu__icon">
+          <div class="menu__icon--detail"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-menu">
+    <div class="section-menu__container">
+      <ul class="section-menu__gnb">
+        <li>
+          <span class="section-menu__num">01</span>
+          <a href="" class="section-menu__list">Work</a>
+        </li>
+        <li>
+          <span class="section-menu__num">02</span>
+          <a href="./about.html" class="section-menu__list">About</a>
+        </li>
+        <li>
+          <span class="section-menu__num">03</span>
+          <a href="javascript:goPage()" class="section-menu__list">Blog</a>
+        </li>
+        <li>
+          <span class="section-menu__num">04</span>
+          <a href="./contect.html" class="section-menu__list">Contact</a>
+        </li>
+      </ul>
+      <div class="section-menu__text">
+        <div class="section-menu__contact">
+          <ul>
+            <li><a href="mailto:jusung.design@gmail.com">jusung.design@gmail.com</a></li>
+            <li><a href="./resume.pdf">Resume</a></li>
+          </ul>
+        </div>
+        <div class="section-menu__social">
+          <ul>
+            <li><a href="https://www.behance.net/jus_k">Behance</a></li>
+            <li><a href="https://www.instagram.com/jus__k/">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100003359235104">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="section-menu__copyright">
+          <p>© 2019. Jusung Kim. all rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-screen">
+    <section class="section-portfolio">
+      <div class="section-portfolio__cover">
+        <div class="section-portfolio__cover-container">
+          <div class="section-portfolio__title">
+            <h2 class="section-portfolio__main-title">TRIPURSE</h2>
+            <h3 class="section-portfolio__sub-title">Travel Management Application</h3>
+            <p class="section-portfolio__label">
+              UI/UX Design<span></span>iOS App
+            </p>
+          </div>
+          <div class="section-portfolio__info">
+            <div class="section-portfolio__info-container">
+              <p class="section-portfolio__info-title">Project Type</p>
+              <p>Personal Project</p>
+            </div>
+            <div class="section-portfolio__info-container">
+              <p class="section-portfolio__info-title">Timeline</p>
+              <p>2018.11 - 2019.01</p>
+            </div>
+            <div class="section-portfolio__info-container">
+              <p class="section-portfolio__info-title">My Role</p>
+              <p>Business Planing, Market Research, Branding, UX/UI Design, Prototyping</p>
+            </div>
+          </div>
+          <div class="section-portfolio__scroll">
+            <img src="./image/scroll-white.svg">
+          </div>
+        </div>
+      </div>
+      <div class="section-portfolio__overview">
+        <div class="section-portfolio__description">
+          <p class="section-portfolio__description-title">Overview</p>
+          <p class="section-portfolio__description-text">여행을 어디서부터 어떻게 준비해야 할지 모르겠는 사람들을 위한, 여행 적금부터 가이드까지 도와주는 서비스 입니다. 여행 성향 테스트를 거쳐 여행 적금 기간과 비용을 설정하면, 예산에 맞는 여행지를 추천해주고, 적금 관리와 함께 여행지에 대한 정보를 제공해줍니다.</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="bundle.js"></script>
 </body>
+
 </html>

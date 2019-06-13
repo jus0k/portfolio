@@ -1,0 +1,139 @@
+@mixin fadeInUp ($delay) {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+
+.section-portfolio {
+  
+  &__cover {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $white;
+    background-color: $tripurse;
+    font-family: $sans-serif;
+    -webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);
+
+    &.show {
+      animation-name: showImage;
+      animation-duration: 1.5s;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      animation-fill-mode: both;
+      animation-direction: alternate;
+      -webkit-animation-name: showImage;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-direction: alternate;
+    }
+  }
+
+  &__cover-container {
+    width: 80%;
+    max-width: 1180px;
+    height: 60%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__main-title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 7rem;
+    @include fadeInUp(0.3s);
+  }
+
+  &__sub-title {
+    font-size: 2rem;
+    font-weight: 400;
+    @include fadeInUp(0.6s);
+  }
+
+  &__label {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    @include fadeInUp(0.3s);
+
+    span {
+      display: inline-block;
+      width: 3rem;
+      border-bottom: 1px solid $white;
+      margin: 0 1rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  &__info {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: row;
+    @include fadeInUp(0.7s);
+
+    &-container {
+      width: 15%;
+      margin-right: 3%;
+
+      &:last-child {
+        width: 25%;
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 12.5rem;
+      opacity: 0.5;
+      transition: all 0.5s linear;
+      animation: spin 20s infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  &__description {
+    &-title {
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    &-text {
+      line-height: 1.5;
+    }
+  }
+
+  &__overview {
+    width: 80%;
+    max-width: 1180px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .section-portfolio__description {
+      width: 50%;
+    }
+  }
+
+
+}

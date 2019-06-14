@@ -39,7 +39,7 @@ const loadPage = () => {
 
   const routes = {
     'tripurse': function () {
-      get('/data/tripurse.html')
+      get('portfolio/data/tripurse.html')
         .then(res => renderHtml(res));
     },
     otherwise(page) {

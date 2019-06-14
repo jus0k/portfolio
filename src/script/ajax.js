@@ -3,10 +3,6 @@ const loadPage = () => {
   const loadCover = document.querySelector('.loading-cover');
   const catalogue = document.querySelector('.section-catalogue__container');
   
-  const hideMain = () => {
-    loadCover.classList.add('show');
-  };
-
   const showCover = () => {
     const cover = document.querySelector('.section-portfolio__cover');
     window.scrollTo(0, 0);
@@ -16,9 +12,10 @@ const loadPage = () => {
   };
 
   function renderHtml(html) {
-    hideMain();
+    loadCover.classList.add('show');
     setTimeout(function(){
       screen.innerHTML = html;
+      loadCover.classList.remove('show');
       showCover();
     }, 1000);
   }
@@ -38,24 +35,26 @@ const loadPage = () => {
   }
 
   const routes = {
+    '': function () {
+      get('/data/main.html')
+        .then(res => renderHtml(res));
+    },
     'tripurse': function () {
       get('/data/tripurse.html')
         .then(res => renderHtml(res));
     },
     otherwise(page) {
-      screen.innerHTML = `${page} Not Found`;
+      screen.innerHTML = `${location.hash} Not Found`;
     }
   };
 
-  function router(page) {
-    (routes[page] || routes.otherwise)(page);
+  function router() {
+    const hash = location.hash.replace('#', '');
+    (routes[hash] || routes.otherwise)();
   }
-
-  catalogue.addEventListener('click', e => {
-    if (!e.target.parentNode || e.target.parentNode.nodeName !== 'A') return;
-    e.preventDefault();
-    router(e.target.parentNode.id);
-  });
+  
+  window.addEventListener('hashchange', router);
+  window.addEventListener('DOMContentLoaded', router);
 }
 
 export { loadPage };

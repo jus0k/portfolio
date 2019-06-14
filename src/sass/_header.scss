@@ -44,6 +44,7 @@
 
   &.open {
     .menu__background {
+      opacity: 1 !important;
       transform: scale(100);
     }
   }

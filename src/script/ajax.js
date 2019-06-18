@@ -1,7 +1,10 @@
+import { hideMenu } from './menu';
+
 const loadPage = () => {
   const screen = document.getElementById('screen');
   const loadCover = document.querySelector('.loading-cover');
   const catalogue = document.querySelector('.section-catalogue__container');
+  const sectionMenu = document.querySelector('.section-menu');
   
   const showCover = () => {
     const cover = document.querySelector('.section-portfolio__cover');
@@ -12,6 +15,9 @@ const loadPage = () => {
   };
 
   function renderHtml(html) {
+    if (sectionMenu.classList.contains('show')) {
+      hideMenu();
+    }
     loadCover.classList.add('show');
     setTimeout(function(){
       screen.innerHTML = html;
@@ -39,11 +45,15 @@ const loadPage = () => {
       get('/data/main.html')
         .then(res => renderHtml(res));
     },
+    'about': function () {
+      get('/data/about.html')
+        .then(res => renderHtml(res));
+    },
     'tripurse': function () {
       get('/data/tripurse.html')
         .then(res => renderHtml(res));
     },
-    otherwise(page) {
+    otherwise() {
       screen.innerHTML = `${location.hash} Not Found`;
     }
   };
@@ -54,7 +64,6 @@ const loadPage = () => {
   }
   
   window.addEventListener('hashchange', router);
-  window.addEventListener('DOMContentLoaded', router);
 }
 
 export { loadPage };

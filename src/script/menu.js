@@ -13,4 +13,12 @@ const showMenu = () => {
   logo.classList.toggle('white');
 };
 
-export { menuBtn, showMenu };
+const hideMenu = () => {
+  menuIcon.classList.remove('animate');
+  menuBtn.classList.remove('open');
+  sectionMenu.classList.remove('show');
+  logo.classList.remove('white');
+  sectionScreen.classList.remove('hide');
+}
+
+export { menuBtn, showMenu, hideMenu };

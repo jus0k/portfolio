@@ -1,0 +1,245 @@
+.section-about {
+  width: 100%;
+  font-family: $sans-serif;
+}
+
+.section-gretting {
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    width: 80%;
+    max-width: 1180px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 7rem;
+    margin-top: 12rem;
+    @include fadeInUp(0);
+  }
+
+  &__text {
+    margin-top: 1rem;
+    width: 50%;
+    line-height: 1.5;
+    @include fadeInUp(0.4s);
+  }
+
+  &__gallery {
+    margin-top: 4rem;
+    width: fit-content;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      left: calc((100vw - 1180px)/2);
+    }
+
+    li {
+      width: 480px;
+      height: 480px;
+      margin-right: 20px;
+      background-color: lightgray;
+    }
+  }
+}
+
+.section-values {
+  width: 100%;
+  height: fit-content;
+  background-color: $light-grey;
+  padding: 5rem 0;
+  margin: 8rem auto;
+  position: relative;
+
+  &__container {
+    width: 80%;
+    max-width: 1180px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  &__title {
+    width: 50%;
+    font-size: 5rem;
+    font-weight: 900;
+    text-align: right;
+    margin-top: 5rem;
+    
+    h2 {
+      position: sticky;
+      top: 40%;
+    }
+  }
+
+  &__list {
+    width: 50%;
+
+    li {
+      margin: 5rem 0;
+    }
+
+    li > h3 > img {
+      width: 2rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+}
+
+.section-competency {
+  &__container {
+    width: 80%;
+    max-width: 1180px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 7rem;
+  }
+
+  &__text-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    line-height: 1.5;
+    width: 50%;
+  }
+
+  &__list {
+    line-height: 2;
+    width: 35%;
+  }
+
+  &__scroll {
+    width: 100%;
+    overflow: hidden;
+
+    &-text {
+      position: relative;
+      width: 1000rem;
+      left: calc((100vw - 1180px)/2);
+      font-size: 8rem;
+      font-weight: 900;
+      color: $light-grey;
+    }
+  }
+}
+
+.section-sayhello {
+  width: 100%;
+  height: 100vh;
+  font-family: $sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 900;
+    color: $white;
+    text-shadow: 
+      -0.5px -0.5px 0 $black,  
+      0.5px -0.5px 0 $black,
+      -0.5px 0.5px 0 $black,
+      0.5px 0.5px 0 $black;
+    
+    span {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $black;
+        height: 0.4rem;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      &:hover {
+        color: $black;
+      }
+      &:hover:before {
+        right: 0;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+  }
+
+  &__contact {
+    position: absolute;
+    bottom: 50px;
+    width: 80%;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__text {
+    opacity: 0.5;
+  }
+
+  &__link {
+    ul {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        font-weight: 700;
+        opacity: 0.5;
+        margin-left: 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

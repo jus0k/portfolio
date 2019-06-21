@@ -60,13 +60,13 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    animation: spin 20s infinite;
+    animation-timing-function: linear;
 
     img {
       width: 12.5rem;
       opacity: 0.5;
       transition: all 0.5s linear;
-      animation: spin 20s infinite;
-      animation-timing-function: linear;
     }
   }
 }

@@ -35,8 +35,7 @@
     ul {
       display: flex;
       flex-direction: row;
-      position: relative;
-      left: calc((100vw - 1180px)/2);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     li {
@@ -53,7 +52,7 @@
   height: fit-content;
   background-color: $light-grey;
   padding: 5rem 0;
-  margin: 8rem auto;
+  margin: 10rem auto;
   position: relative;
 
   &__container {
@@ -139,10 +138,10 @@
     &-text {
       position: relative;
       width: 1000rem;
-      left: calc((100vw - 1180px)/2);
       font-size: 8rem;
       font-weight: 900;
       color: $light-grey;
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
   }
 }

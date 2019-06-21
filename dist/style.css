@@ -104,8 +104,18 @@ html {
   height: 100vh;
   background-color: #fff;
   z-index: 999;
-  -webkit-clip-path: inset(100% 0 0 0);
-  clip-path: inset(100% 0 0 0);
+  -webkit-clip-path: inset(0 0 100% 0);
+  clip-path: inset(0 0 100% 0);
+  animation-name: hideImage;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  -webkit-animation-name: hideImage;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
 }
 
 .loading-cover.show {
@@ -239,6 +249,17 @@ html {
   to {
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes hideImage {
+  from {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
   }
 }
 
@@ -617,14 +638,14 @@ html {
   position: absolute;
   right: 0;
   bottom: 0;
+  animation: spin 20s infinite;
+  animation-timing-function: linear;
 }
 
 .section-hello__scroll img {
   width: 12.5rem;
   opacity: 0.5;
   transition: all 0.5s linear;
-  animation: spin 20s infinite;
-  animation-timing-function: linear;
 }
 
 .rotate__container {
@@ -1145,21 +1166,6 @@ html {
   color: #fff;
   background-color: #1680FF;
   font-family: "Lato", "Nanum Barun Gothic", sans-serif;
-  -webkit-clip-path: inset(100% 0 0 0);
-  clip-path: inset(100% 0 0 0);
-}
-
-.section-portfolio__cover.show {
-  animation-name: showImage;
-  animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  animation-fill-mode: both;
-  animation-direction: alternate;
-  -webkit-animation-name: showImage;
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-direction: alternate;
 }
 
 .section-portfolio__cover-container {
@@ -1386,8 +1392,7 @@ html {
 .section-gretting__gallery ul {
   display: flex;
   flex-direction: row;
-  position: relative;
-  left: calc((100vw - 1180px)/2);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .section-gretting__gallery li {
@@ -1402,7 +1407,7 @@ html {
   height: fit-content;
   background-color: #F5F6F6;
   padding: 5rem 0;
-  margin: 8rem auto;
+  margin: 10rem auto;
   position: relative;
 }
 
@@ -1487,10 +1492,10 @@ html {
 .section-competency__scroll-text {
   position: relative;
   width: 1000rem;
-  left: calc((100vw - 1180px)/2);
   font-size: 8rem;
   font-weight: 900;
   color: #F5F6F6;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .section-sayhello {

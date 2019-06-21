@@ -20,21 +20,6 @@
     color: $white;
     background-color: $tripurse;
     font-family: $sans-serif;
-    -webkit-clip-path: inset(100% 0 0 0);
-    clip-path: inset(100% 0 0 0);
-
-    &.show {
-      animation-name: showImage;
-      animation-duration: 1.5s;
-      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-      animation-fill-mode: both;
-      animation-direction: alternate;
-      -webkit-animation-name: showImage;
-      -webkit-animation-duration: 1.5s;
-      -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-      -webkit-animation-fill-mode: both;
-      -webkit-animation-direction: alternate;
-    }
   }
 
   &__cover-container {

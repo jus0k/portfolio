@@ -1,13 +1,14 @@
 import { menuBtn, showMenu } from './menu';
-import { showContents } from './scroll';
+import { rotateImage, showContents } from './scroll';
 import { loadPage } from './ajax';
-import { showCover } from './loading';
+import { scrollAbout } from './about';
 
 const init = () => {
+  scrollAbout();
+  rotateImage();
+  loadPage();
   menuBtn.addEventListener('click', showMenu);
   window.addEventListener('scroll', showContents);
-  window.onload = showCover();
-  loadPage();
 }
 
 init();

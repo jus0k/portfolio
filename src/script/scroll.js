@@ -38,4 +38,33 @@ const showContents = () => {
   }
 }
 
-export { showContents };
+const rotateImage = () => {
+  let latestKnownScrollY = 0,
+    ticking = false;
+
+  function update() {
+    ticking = false;
+    const scrollImage = document.getElementById('scroll-image');
+    if (scrollImage !== null) {
+      scrollImage.style.transfrom = `rotate(${latestKnownScrollY}deg)`;
+      console.log(scrollImage.style.transfrom);
+    }
+  }
+
+  function onScroll() {
+    latestKnownScrollY = window.scrollY;
+    requestTick();
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(update);
+    }
+    ticking = true;
+  }
+
+  window.addEventListener('scroll', onScroll, false);
+}
+
+
+export { rotateImage, showContents };

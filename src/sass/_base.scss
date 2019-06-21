@@ -27,8 +27,18 @@ html {
   height: 100vh;
   background-color: $white;
   z-index: 999;
-  -webkit-clip-path: inset(100% 0 0 0);
-  clip-path: inset(100% 0 0 0);
+  -webkit-clip-path: inset(0 0 100% 0);
+  clip-path: inset(0 0 100% 0);
+  animation-name: hideImage;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  -webkit-animation-name: hideImage;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
 
   &.show {
     animation-name: showImage;

@@ -114,3 +114,13 @@
     clip-path: inset(0 0 0 0);
   }
 }
+
+@keyframes hideImage {
+  from {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  } to {
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+  }
+}

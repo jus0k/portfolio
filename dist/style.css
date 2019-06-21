@@ -106,6 +106,7 @@ html {
   z-index: 999;
   -webkit-clip-path: inset(0 0 100% 0);
   clip-path: inset(0 0 100% 0);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   animation-name: hideImage;
   animation-duration: 1.5s;
   animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
@@ -169,6 +170,21 @@ html {
     visibility: visible;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 }
 
@@ -1385,7 +1401,7 @@ html {
 }
 
 .section-gretting__gallery {
-  margin-top: 4rem;
+  margin-top: 5rem;
   width: fit-content;
 }
 
@@ -1430,7 +1446,22 @@ html {
 
 .section-values__title h2 {
   position: sticky;
-  top: 40%;
+  top: 30%;
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.section-values__title h2.show {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .section-values__list {
@@ -1453,6 +1484,10 @@ html {
 
 .section-values__text {
   line-height: 1.5;
+}
+
+.section-competency {
+  margin: 5rem 0;
 }
 
 .section-competency__container {
@@ -1493,6 +1528,7 @@ html {
   position: relative;
   width: 1000rem;
   font-size: 8rem;
+  line-height: 10rem;
   font-weight: 900;
   color: #F5F6F6;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);

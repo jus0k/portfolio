@@ -29,7 +29,7 @@
   }
 
   &__gallery {
-    margin-top: 4rem;
+    margin-top: 5rem;
     width: fit-content;
 
     ul {
@@ -73,7 +73,22 @@
     
     h2 {
       position: sticky;
-      top: 40%;
+      top: 30%;
+      -webkit-animation-name: fadeOutUp;
+      animation-name: fadeOutUp;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+
+      &.show {
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+      }
     }
   }
 
@@ -101,7 +116,10 @@
 
 }
 
+
 .section-competency {
+  margin: 5rem 0;
+  
   &__container {
     width: 80%;
     max-width: 1180px;
@@ -139,6 +157,7 @@
       position: relative;
       width: 1000rem;
       font-size: 8rem;
+      line-height: 10rem;
       font-weight: 900;
       color: $light-grey;
       transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);

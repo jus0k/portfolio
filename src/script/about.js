@@ -4,9 +4,22 @@ const scrollAbout = () => {
 
   function update() {
     ticking  = false;
-    const scrollContainer = document.getElementById('scroll-container');
-    if (scrollContainer !== null) {
-      scrollContainer.style.transform = `translateX(-${latestKnownScrollY / 5}px)`;
+    const scrollGallery = document.getElementById('scroll-gallery'),
+      scrollText = document.getElementById('scroll-text'),
+      sectionTitle = document.querySelector('.section-values__title > h2');
+    
+    if (scrollGallery !== null) {
+      scrollGallery.style.transform = `translateX(-${latestKnownScrollY / 5}px)`;
+    }
+
+    if (latestKnownScrollY > 700 && latestKnownScrollY < 2000) {
+      sectionTitle.classList.add('show');
+    } else {
+      sectionTitle.classList.remove('show');
+    }
+
+    if (scrollText !== null && latestKnownScrollY > 2500) {
+      scrollText.style.transform = `translateX(-${(latestKnownScrollY - 2500)}px)`;
     }
   }
 

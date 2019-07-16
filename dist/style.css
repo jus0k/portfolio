@@ -1375,7 +1375,7 @@ html {
   font-size: 5rem;
   font-weight: 900;
   line-height: 7rem;
-  margin-top: 12rem;
+  margin-top: 25%;
   opacity: 0;
   transform: translate3d(0, 100%, 0);
   animation-name: fadeInUp;
@@ -1387,8 +1387,8 @@ html {
 }
 
 .section-gretting__text {
-  margin-top: 1rem;
-  width: 50%;
+  margin-top: 3rem;
+  width: 60%;
   line-height: 1.5;
   opacity: 0;
   transform: translate3d(0, 100%, 0);
@@ -1401,7 +1401,7 @@ html {
 }
 
 .section-gretting__gallery {
-  margin-top: 5rem;
+  margin-top: 10rem;
   width: fit-content;
 }
 

@@ -7,6 +7,8 @@
 
 ### 🏠 [Homepage](https://jusungkim.kr/)
 
+![screenshot](https://user-images.githubusercontent.com/43605468/71435148-10f83380-272b-11ea-8346-328cabd8ddcf.png)
+
 ## 개인 웹 포트폴리오
 
 - Ajax를 이용하여 Hash방식으로 SPA 구현
